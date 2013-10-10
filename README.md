@@ -7,7 +7,7 @@ Aiming for this to be a template to use for future node-js powered sites. A work
 * Node.js (0.10.20+)
 * npm (1.3.11+)
 
-   `npm install underscore underscore.string`
+   `npm install underscore underscore.string paperboy`
 
 ## Configuration
 There is one default config file, located in cfg/default.json. Default configuration can be extended by
