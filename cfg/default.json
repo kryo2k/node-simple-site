@@ -1,7 +1,7 @@
 {
-    "log": {
-        "level": 0
-    },
+    "applicationName" : "NodeJS Simple Site",
+    "loadUserConfigFile": true,
+    "logPriority": 1,
     "server": {
         "addr": "0.0.0.0",
         "port": 8080,
