@@ -1,0 +1,18 @@
+@function nss-palette($component: background, $theme: lite) {
+    @if $component == bg or $component == background {
+        @if $theme == lite {
+            @return $color-background-lt;
+        }
+        @elseif $theme == dark {
+            @return $color-background-dk;
+        }
+    }
+    @elseif $component == fg or $component == foreground {
+        @if $theme == lite {
+            @return $color-foreground-lt;
+        }
+        @elseif $theme == dark {
+            @return $color-foreground-dk;
+        }
+    }
+}

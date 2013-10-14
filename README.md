@@ -9,6 +9,10 @@ Aiming for this to be a template to use for future node-js powered sites. A work
 
    `npm install underscore paperboy`
 
+* ruby (1.9.x)
+
+   `gem install compass breakpoint susy toolkit`
+
 ## Configuration
 There is one default config file, located in cfg/default.json. Default configuration can be extended by
 creating a new file in cfg/ with the name of the user running the process followed by the .json extension

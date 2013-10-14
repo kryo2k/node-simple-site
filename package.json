@@ -2,7 +2,7 @@
   "name": "Node simple site",
   "version": "0.1.0",
   "description": "Basic node-js powered site.",
-  "main": "bootstrap.js",
+  "main": "run.js",
   "scripts": {
     "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
   },

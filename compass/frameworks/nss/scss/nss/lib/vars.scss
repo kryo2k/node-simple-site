@@ -1,0 +1,25 @@
+@import 'vars/bootstrap.scss';
+@import 'vars/susy.scss';
+
+$include-mobile: false !default;
+$include-webkit: false !default;
+$include-gecko: false !default;
+$include-mosaic: false !default;
+$ie-legacy: false !default;
+$mobile-orientation: portrait !default;
+
+// @see https://github.com/snugug/respond-to
+$breakpoints: 'mobile-landscape' (800px 700px),
+              'mobile-portrait' (700px 800px);
+
+@debug include-mobile $include-mobile;
+@debug include-webkit $include-webkit;
+@debug include-gecko $include-gecko;
+@debug include-mosaic $include-mosaic;
+@debug ie-legacy $ie-legacy;
+@debug mobile-orientation $mobile-orientation;
+
+$color-background-dk: #858585;
+$color-foreground-dk: #FFFFFF;
+$color-background-lt: #44BBFF;
+$color-foreground-lt: #206D99;

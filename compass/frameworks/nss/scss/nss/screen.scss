@@ -1,0 +1,42 @@
+$include-webkit: true !default;
+$include-gecko: true !default;
+
+@import 'toolkit';
+@import 'breakpoint';
+@import 'susy';
+@import 'nss';
+
+html.nss {
+
+    h1 {
+        background-color: $grayDarker;
+        color: $blueDark;
+        padding: 25px;
+    }
+
+    .container {
+        @included container(5);
+        div {
+            vertical-align: top;
+            background-color: $grayLighter;
+
+            p {
+                text-align: justify;
+                padding: 15px;
+            }
+            &.left,
+            &.right {
+                @included span-columns(5);
+                height: 250px;
+
+                @include respond-to(mobile-landscape) {
+                    height: 150px;
+                }
+                @include respond-to(mobile-portrait) {
+                    height: 650px;
+                }
+            }
+        }
+    }
+
+}

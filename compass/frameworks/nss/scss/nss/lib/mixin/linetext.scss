@@ -1,0 +1,4 @@
+@mixin nss-linetext($line-height, $font-scale: 1) {
+    line-height: $line-height;
+    font-size: $line-height * $font-scale;
+}

@@ -1,0 +1,10 @@
+@mixin nss-paint-bg($theme: dark) {
+    background-color: nss-palette(bg, $theme);
+}
+@mixin nss-paint-fg($theme: dark) {
+    color: nss-palette(fg, $theme);
+}
+@mixin nss-paint-all($theme: dark) {
+    @include nss-paint-bg($theme);
+    @include nss-paint-fg($theme);
+}
