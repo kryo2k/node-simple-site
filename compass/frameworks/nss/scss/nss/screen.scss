@@ -1,6 +1,7 @@
 $include-webkit: true !default;
 $include-gecko: true !default;
 
+@import 'compass/reset';
 @import 'toolkit';
 @import 'breakpoint';
 @import 'susy';
@@ -9,31 +10,44 @@ $include-gecko: true !default;
 html.nss {
 
     h1 {
-        background-color: $grayDarker;
-        color: $blueDark;
+        @include nss-paint-all(dark);
         padding: 25px;
     }
 
     .container {
-        @included container(5);
-        div {
-            vertical-align: top;
-            background-color: $grayLighter;
+        $container-width: 75em;
+        @include container(12);
 
-            p {
-                text-align: justify;
-                padding: 15px;
-            }
+        h2 {
+            @include nss-paint-all(dark);
+            font-size: 1.8em;
+            font-weight: bold;
+            padding: 10px 5px 0;
+        }
+
+        p {
+            @include nss-paint-all(lite);
+            text-align: justify;
+            padding: 15px;
+        }
+
+        div {
+
             &.left,
             &.right {
-                @included span-columns(5);
-                height: 250px;
-
-                @include respond-to(mobile-landscape) {
-                    height: 150px;
+                @include span-columns(6);
+                padding: 10px;
+                @include respond-to(screen-320) {
+                    font-size: 1em;
                 }
-                @include respond-to(mobile-portrait) {
-                    height: 650px;
+                @include respond-to(screen-480) {
+                    font-size: 1.3em;
+                }
+                @include respond-to(screen-720) {
+                    font-size: 1.7em;
+                }
+                @include respond-to(screen-1000) {
+                    font-size: 2em;
                 }
             }
         }
