@@ -2,16 +2,49 @@ $include-webkit: true !default;
 $include-gecko: true !default;
 
 @import 'compass/reset';
+@import 'compass/css3';
 @import 'toolkit';
 @import 'breakpoint';
 @import 'susy';
 @import 'nss';
 
+@include font-face("04b03", font-files("04b03.otf", "04b03.woff"));
+@include font-face("consolai-lite", font-files("consolai-lite.otf", "consolai-lite.woff"));
+@include font-face("consola-lite", font-files("consola-lite.otf", "consola-lite.woff"));
+
 html.nss {
+    font-family: "consolai-lite", Sans;
+
+    h1, h2, h3, h4 {
+        font-weight: bold;
+    }
 
     h1 {
         @include nss-paint-all(dark);
+        font-family: "04b03", Sans;
         padding: 25px;
+        text-align: center;
+        padding: 5px;
+
+        @include respond-to(screen-320) {
+            font-size: 1.5em;
+        }
+        @include respond-to(screen-480) {
+            padding: 10px;
+            font-size: 2.3em;
+        }
+        @include respond-to(screen-720) {
+            padding: 15px;
+            text-align: left;
+            font-size: 2.5em;
+        }
+        @include respond-to(screen-1000) {
+            padding: 25px;
+            font-size: 3em;
+        }
+    }
+
+    section {
     }
 
     .container {
@@ -20,15 +53,16 @@ html.nss {
 
         h2 {
             @include nss-paint-all(dark);
-            font-size: 1.8em;
-            font-weight: bold;
-            padding: 10px 5px 0;
+            font-size: 1.2em;
+            padding: 10px 15px 3px;
         }
 
         p {
             @include nss-paint-all(lite);
-            text-align: justify;
+            overflow: hidden;
+            font-family: "consola-lite", Sans;
             padding: 15px;
+            text-align: justify;
         }
 
         div {
@@ -38,13 +72,13 @@ html.nss {
                 @include span-columns(6);
                 padding: 10px;
                 @include respond-to(screen-320) {
-                    font-size: 1em;
+                    font-size: 1.2em;
                 }
                 @include respond-to(screen-480) {
-                    font-size: 1.3em;
+                    font-size: 1.4em;
                 }
                 @include respond-to(screen-720) {
-                    font-size: 1.7em;
+                    font-size: 1.8em;
                 }
                 @include respond-to(screen-1000) {
                     font-size: 2em;
