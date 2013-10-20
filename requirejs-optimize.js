@@ -17,11 +17,7 @@ global.config = {
         },config));
 
         requirejs.optimize(function (buildResponse) {
-            //var
-            //contents = fs.readFileSync(config.out, 'utf8');
-
             log.debug(logTag, buildResponse);
-
         }, function(err) {
             log.error(logTag, err.originalError);
         });
