@@ -12,11 +12,7 @@ global.config = {
 
         log.debug(logTag,'running..');
 
-        requirejs.config(_.extend({
-            nodeRequire: require
-        },config));
-
-        requirejs.optimize(function (buildResponse) {
+        requirejs.optimize(config, function (buildResponse) {
             log.debug(logTag, buildResponse);
         }, function(err) {
             log.error(logTag, err.originalError);
