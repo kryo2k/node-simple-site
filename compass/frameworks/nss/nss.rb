@@ -1,5 +1,4 @@
 require 'toolkit'
-require 'susy'
 require 'breakpoint'
 
 nss_base_path = File.dirname(__FILE__)

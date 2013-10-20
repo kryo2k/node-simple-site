@@ -6,6 +6,12 @@
         @elseif $theme == dark {
             @return $color-background-dk;
         }
+        @elseif $theme == alt {
+            @return $color-background-alt;
+        }
+        @elseif $theme == alt-2 {
+            @return $color-background-alt-2;
+        }
     }
     @elseif $component == fg or $component == foreground {
         @if $theme == lite {
@@ -14,5 +20,32 @@
         @elseif $theme == dark {
             @return $color-foreground-dk;
         }
+        @elseif $theme == alt {
+            @return $color-foreground-alt;
+        }
+        @elseif $theme == alt-2 {
+            @return $color-foreground-alt-2;
+        }
     }
+    @elseif $component == border or $component == border-color {
+        @if $theme == lite {
+            @return $color-border-lt;
+        }
+        @elseif $theme == dark {
+            @return $color-border-dk;
+        }
+        @elseif $theme == alt {
+            @return $color-border-alt;
+        }
+        @elseif $theme == alt-2 {
+            @return $color-border-alt-2;
+        }
+    }
+    @else {
+        @warn component '#{$component}' not found;
+        @return "red";
+    }
+
+    @warn no palette color value for '#{$theme}' in component '#{$component}';
+    @return "orange";
 }

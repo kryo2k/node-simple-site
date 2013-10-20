@@ -20,7 +20,18 @@ $breakpoints: 'screen-1000' (1000px),
 @debug ie-legacy $ie-legacy;
 @debug mobile-orientation $mobile-orientation;
 
-$color-background-dk: #858585;
-$color-foreground-dk: #FFFFFF;
-$color-background-lt: #44BBFF;
-$color-foreground-lt: #206D99;
+$color-background-dk: #362C2D;
+$color-foreground-dk: #DB3529;
+$color-border-dk: #000;
+
+$color-background-lt: #DB3529;
+$color-foreground-lt: #362C2D;
+$color-border-lt: #000;
+
+$color-background-alt: #FFAC36;
+$color-foreground-alt: #362C2D;
+$color-border-alt: #362C2D;
+
+$color-background-alt-2: rgba(white,0.2);
+$color-foreground-alt-2: #211B1B;
+$color-border-alt-2: #362C2D;

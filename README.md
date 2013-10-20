@@ -11,7 +11,7 @@ Aiming for this to be a template to use for future node-js powered sites. A work
 
 * ruby (1.9.x)
 
-   `gem install compass breakpoint susy toolkit`
+   `gem install compass breakpoint toolkit`
 
 ## Configuration
 There is one default config file, located in cfg/default.json. Default configuration can be extended by

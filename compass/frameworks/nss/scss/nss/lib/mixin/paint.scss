@@ -1,10 +1,42 @@
+$gradient-enable: true !default;
+
 @mixin nss-paint-bg($theme: dark) {
     background-color: nss-palette(bg, $theme);
 }
 @mixin nss-paint-fg($theme: dark) {
     color: nss-palette(fg, $theme);
 }
+@mixin nss-paint-border($theme: dark) {
+    border-color: nss-palette(border, $theme);
+}
 @mixin nss-paint-all($theme: dark) {
     @include nss-paint-bg($theme);
     @include nss-paint-fg($theme);
+    @include nss-paint-border($theme);
+}
+@mixin nss-paint-gradient($theme: dark, $type: default) {
+
+    $bg-color: nss-palette(bg, $theme);
+
+    @if $gradient-enable and $bg-color != transparent {
+        @if $type == "matte" {
+            background: linear-gradient(color-stops(
+                lighten($bg-color,5%),
+                $bg-color 65%,
+                darken($bg-color,10%)
+            ));
+        }
+        @if $type == "glossy" {
+            background: linear-gradient(color-stops(
+                lighten($bg-color,2%),
+                lighten($bg-color,4%) 50%,
+                $bg-color 51%,
+                $bg-color 56%,
+                darken($bg-color,5%)
+            ));
+        }
+    }
+    @else {
+        background-color: $bg-color;
+    }
 }
