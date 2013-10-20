@@ -6,5 +6,13 @@
         "addr": "0.0.0.0",
         "port": 8080,
         "webroot": "public"
+    },
+    "requireJs": {
+        "dir": "public/js",
+        "baseUrl": "js",
+        "name": "nss",
+        "paths": {
+            "jquery": "empty:"
+        }
     }
 }

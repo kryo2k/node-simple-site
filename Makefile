@@ -29,14 +29,14 @@ build-css:
 watch-css:
 	$(COMPASS_BIN) watch $(COMPASS_OPTS) $(COMPASS_DIR)
 
-build-js: javascript-minify
-
-javascript-minify:
+build-js:
+	node requirejs-optimize.js
 
 # node shortcuts
 
 node-run:
 	node run.js
+
 
 # git shortcuts
 

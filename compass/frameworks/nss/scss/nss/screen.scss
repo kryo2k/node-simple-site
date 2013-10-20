@@ -5,7 +5,6 @@ $include-gecko: true !default;
 @import 'compass/css3';
 @import 'toolkit';
 @import 'breakpoint';
-//@import 'susy';
 @import 'nss';
 
 @include font-face("04b03", font-files("04b03.otf", "04b03.woff"));
@@ -64,13 +63,13 @@ html.nss {
             padding-top: 0.5em;
         }
         &.footer-section {
-            margin: 0.75em 0.75em 0 0.75em;
+            margin: 0.65em 0.65em 0 0.65em;
             padding: 0.5em;
         }
     }
     .footer-section {
         @include nss-paint-all(alt-2);
-        border-width: 1px;
+        border-width: 2px 2px 5px;
         border-style: solid;
     }
     .form-section {
@@ -83,8 +82,8 @@ html.nss {
         .container {
             @include nss-paint-all(dark);
             position: relative;
-            height: 400px;
-            border-width: 1px;
+            height: 300px;
+            border-width: 2px;
             border-style: solid;
 
             .log  {
@@ -196,7 +195,7 @@ html.nss {
             p {
                 @include nss-paint-all(lite);
                 @include nss-paint-gradient(lite, matte);
-                border-width: 0 2px 2px;
+                border-width: 0 2px 5px;
                 border-style: solid;
                 font-family: "consola-lite", Sans;
                 padding: 15px;
