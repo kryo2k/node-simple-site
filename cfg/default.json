@@ -8,8 +8,8 @@
         "webroot": "public"
     },
     "requireJs": {
-        "baseUrl": "lib/frontend",
-        "out": "public/js/nss.js",
+        "baseUrl": "public/js/",
+        "out": "public/js/nss-build.js",
         "name": "nss",
         "paths": {
             "jquery": "empty:"
