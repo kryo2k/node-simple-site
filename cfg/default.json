@@ -2,6 +2,26 @@
     "applicationName" : "NodeJS Simple Site",
     "loadUserConfigFile": true,
     "logPriority": 2,
+    "expressApp": {
+        "environment": "production",
+        "environments": {
+            "common": {
+                "addr": "0.0.0.0",
+                "port": 8080
+            },
+            "production": {
+                "port": 8080
+            },
+            "development": {
+                "port": 8180
+            }
+        },
+        "routes": {
+            "static": {
+                "default": "public"
+            }
+        }
+    },
     "server": {
         "addr": "0.0.0.0",
         "port": 8080,

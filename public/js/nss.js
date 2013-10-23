@@ -3,7 +3,8 @@
     requirejs.config({
         baseUrl: 'js/lib',
         paths: {
-            jquery: 'jquery-2.0.3'
+            jquery: 'jquery-2.0.3',
+            nss: '/js/nss'
         }
     });
 

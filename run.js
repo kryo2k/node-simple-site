@@ -4,7 +4,7 @@ global.config = {
 
 (function(core) {
     core.boot(function(instance){
-        core.get('webserver').start(function(){
+        core.get('expressApp').start(function(){
         });
     });
     process.on('SIGINT', function() {
@@ -12,7 +12,8 @@ global.config = {
         process.exit();
     });
     process.on('exit', function(){
-        core.get('webserver').stop(function(){
+        core.debug("process exiting..");
+        core.get('expressApp').stop(function(){
             core.shutdown(function(){
                 core.debug("good bye!");
             });

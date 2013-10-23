@@ -7,7 +7,7 @@ Aiming for this to be a template to use for future node-js powered sites. A work
 * Node.js (0.10.20+)
 * npm (1.3.11+)
 
-   `npm install requirejs underscore paperboy socket.io`
+   `npm install express requirejs underscore deepmerge socket.io`
 
 * ruby (1.9.x)
 
