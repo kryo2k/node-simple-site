@@ -19,6 +19,8 @@
         "routes": {
             "static": {
                 "default": "public"
+            },
+            "dynamic": {
             }
         }
     },
